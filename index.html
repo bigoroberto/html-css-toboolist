@@ -1,77 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <title>Toboolist</title>
+    <meta charset="UTF-8">
+    <title>toboolist</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <div class="container">
-      <img src="img/img/Logo.png" alt="Logo">
-      <h1>Toboolist</h1>
-    </div>
-  </header>
-
-  <nav>
-    <div class="content">
-      <button class="add-task" type="button">Add Task</button>
-      <button class="add-section" type="button">Add Section</button>
-    </div>
-  </nav>
-
-  <main>
-    <section class="corpo">
-      <div class="sezione-1">
-        <h2>&#9660; New Task</h2>
-      </div>
-      <span class="check"><span class="cerchio verde"> &check;</span><h5>Quarterly Newsletter</h5>
-      <button class="articoli editoria" type="button">Editorial</button>
-    </section>
-    <section class="corpo">
-      <div class="sezione-1">
-        <h2>&#9660; Today</h2>
-      </div>
-      <span class="check"><span class="cerchio verde"> &check;</span><h5>Recruiting blog post</h5>
-      <button class="articoli editoria" type="button">Editorial</button>
-      <div>
-        <span class="check"><span class="cerchio verde"> &check;</span><h5>Mobile app launch</h5>
-      <button class="articoli goals" type="button">Q1 Goals</button>
-      </div>
-      <div>
-        <span class="cross"><span class="cerchio rosso"> &cross;</span><h5>Interview John W.</h5>
-      <button class="articoli recruiting" type="button">Recruiting</button>
-      </div>
-      <div>
-        <span class="check"><span class="cerchio verde"> &check;</span><h5>Summit update to mobile storefronts</h5>
-      <button class="articoli mobile" type="button">Mobile</button>
-      </div>
-    </section>
-    <section class="corpo">
-      <div class="sezione-1">
-        <h2>&#9660; Upcoming</h2>
-      </div>
-      <span class="cross"><span class="cerchio rosso"> &cross;</span><h5>Recruiting blog post</h5>
-      <div>
-        <span class="check"><span class="cerchio verde"> &check;</span><h5>Homepage refresh</h5>
-      <button class="articoli website" type="button">Website</button>
-      </div>
-      <div>
-        <span class="check"><span class="cerchio verde"> &check;</span><h5>Onboard new Sales team members</h5>
-      <button class="articoli sales" type="button">Sales</button>
-      </div>
-      <div>
-        <span class="check"><span class="cerchio verde"> &check;</span><h5>Review editorial calendar</h5>
-      <button class="articoli editoria" type="button">Editorial</button>
-      </div>
-    </section>
-
-      
-    </div>
-  </main>
+    <header>
+        <!-- <img id="logo" src="https://www.boolean.careers/images/misc/logo.png" alt=""> -->
+        <img class="logo" src="img/Logo.png" alt="logo boolean">
+        <span class="logo-text">Toboolist</span>
+    </header>
+    <main>
+        <div class="container">
+            <div class="top">
+                <button type="button" class="btn btn-filled">
+                    <a href="#">Add Task</a>
+                </button>
+                <button type="button" class="btn btn-empty"><a href="#">Add Section</a></button>
+            </div>
+            <div class="tasks">
+                <ul>
+                    <li>
+                        <h3> New Task </h3> <!-- &#9662 -->
+                        <ul>
+                            <!-- spieghiamo che la classe tag ci serve per getsire le caratteristiche principali del tag e tag-type-n per gestire i colori, non sono degli id perchè possiamo avere tanti tag con quel tipo -->
+                            <li>
+                                <span class="circle checked"></span>
+                                Quarterly Newsletter
+                                 <span class="tag tag-type-editorial">
+                                     Editorial
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3> Today </h3>
+                        <ul>
+                            <li><span class="circle checked"></span>Recruiting blog post <span class="tag tag-type-editorial">Editorial</span></li>
+                            <li><span class="circle checked"></span>Mobile app luaunch <span class="tag tag-type-goals">Q1 Goals</span></li>
+                            <li><span class="circle delete"></span>Interview John H. <span class="tag tag-type-recruting">Recruiting</span></li>
+                            <li><span class="circle checked"></span>Summit update to mobiile storefronts <span class="tag tag-type-mobile">Mobile</span></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3> Upcoming </h3>
+                        <ul>
+                            <li><span class="circle delete"></span>Schedule meeting with Alex </li>
+                            <li><span class="circle checked"></span>Homepage refresh <span class="tag tag-type-website">Website</span></li>
+                            <li><span class="circle checked"></span>Onboard new Sales team members <span class="tag tag-type-sales">Sales</span></li>
+                            <li><span class="circle checked"></span>Review editorial calendar <span class="tag tag-type-editorial">Editorial</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

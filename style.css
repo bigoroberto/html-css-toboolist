@@ -1,116 +1,139 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Hind Siliguri', sans-serif;
+  box-sizing: border-box;
 }
 
-header{
-  height: 100px;
-  background-size: 30%; 
-
+body {
+  background-color: #f6f8f9;
+  font-family: Arial, sans-serif;
 }
 
-.container{
-  padding: 15px;
-  margin-left: 10px;
+header {
+  height: 70px;
+  background-color: white;
+  margin-bottom: 40px;
+  padding: 10px 20px;
 }
 
-
-.container h1 {
-  display: inline-block;
-  font-size: 60px;
-  vertical-align: 7%;
+.logo {
+  height: 100%;
+  vertical-align: middle;
 }
 
-nav, main{
-  width: 75%;
-  margin: auto;
-  margin-top: 10px;;
+.logo-text {
+  font-size: 38px;
+  font-weight: 900;
+  vertical-align: middle;
 }
 
-.content{
-  margin-top: 30px;
-}
-
-.add-task{
-  padding: 10px;
-  background-color: rgb(76, 114, 240);
-  color: #fff;
-  border: none;
-}
-
-.add-section{
-  padding: 10px;
-  color: lightgrey;
-  border-color: lightgray;
-}
-
-.add-task, .add-section{
+.container {
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
   border-radius: 5px;
 }
 
-.corpo .sezione-1 h2{
-  margin-top: 40px;
+.top {
+  height: 50px;
+  padding: 0 50px;
+  border-bottom: 2px solid #f6f8f9;
+  line-height: 50px;
 }
 
-.cross, .check{
-  margin-top: 10px;
-}
-
-.cerchio{
-  margin-left: 6px;
-  border-radius: 50%;
-}
-
-.verde{
-  border: 1px solid green;
-  color: green;
-}
-
-.rosso{
-  border: 1px solid rgb(170, 13, 8);
-  color: red;
-}
-
-main h5{
-  display: inline-block;
-  margin-left: 12px;
-  margin-top: 10px;
-}
-
-.articoli{
-  display: inline-block;
-  padding: 3px;
-  border-radius: 33%;
-  color: #fff;
+.btn {
+  padding: 5px 10px;
   border: none;
+  border-radius: 5px;
 }
 
-
-.editoria{
-  background-color: rgb(25, 98, 158);
+.btn a {
+  text-decoration: none;
 }
 
-.goals{
-  background-color: rgb(115, 43, 163);
+.btn-filled {
+  border: 1px solid #14aaf5;
+  background-color: #14aaf5;
 }
 
-.recruiting{
-  background-color: rgb(12, 97, 12)
+.btn-filled a {
+  color: white;
 }
 
-.mobile{
-  background-color: orange;
+.btn-empty {
+  border: 1px solid #c4cbd0;
+  background-color: white;
 }
 
-.sales{
-  background-color: rgb(77, 211, 106);
+.btn-empty a {
+  color: #c4cbd0;
 }
 
-.website{
-  background-color: palevioletred;
+.tasks {
+  padding: 20px 50px;
 }
 
-div{
-  margin-top: 10px;
+li h3::before {
+  /* https://www.w3schools.com/cssref/css_entities.asp */
+  content: '\25BE';
+}
+
+li {
+  list-style: none;
+  padding: 10px 0;
+  color: #434851;
+}
+
+li .circle::before {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  line-height: 15px;
+  font-size: 10px;
+  text-align: center;
+}
+
+li .circle.checked::before {
+  content: '\2713';
+  border: 1px solid #2cc6ab;
+  color: #2cc6ab;
+}
+
+li .circle.delete::before {
+  content: '\2573';
+  border: 1px solid #ff0000;
+  color: #ff0000;
+}
+
+.tag {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 10px;
+  color: white;
+}
+
+.tag-type-editorial {
+  background-color: #09a9ed;
+}
+
+.tag-type-goals {
+  background-color: #ab5de6;
+}
+
+.tag-type-recruting {
+  background-color: #2cc6ab;
+}
+
+.tag-type-mobile {
+  background-color: #ff9b00;
+}
+
+.tag-type-website {
+  background-color: #ec4a9d;
+}
+
+.tag-type-sales {
+  background-color: #a3d116;
 }
